@@ -1,0 +1,11 @@
+name = "seosiri-mcp-gateway"
+main = "src/backend/index.ts"
+compatibility_date = "2026-08-25"
+workers_dev = true
+
+routes = [
+  { pattern = "rovomcp.seosiri.com", custom_domain = true }
+]
+
+[vars]
+SEOSIRI_AUTH_SECRET = "production_fallback_handshake_hash_token"

@@ -1,0 +1,6 @@
+{
+  "recommendations": [
+    "cloudflare.wrangler-vscode",
+    "dbaeumer.vscode-eslint"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "seosiri-rovo-mcp-link",
+  "version": "1.0.0",
+  "description": "Zero-Trust Enterprise Gateway bridging Atlassian Rovo Agents, Jira/Confluence, and External IDEs to SEOSiri MCP Servers via rovomcp.seosiri.com",
+  "main": "src/backend/index.ts",
+  "type": "module",
+  "scripts": {
+    "build:worker": "tsc --project tsconfig.json",
+    "deploy:worker": "wrangler deploy",
+    "forge:deploy": "forge deploy",
+    "forge:install": "forge install"
+  },
+  "keywords": [
+    "model-context-protocol",
+    "mcp",
+    "atlassian-rovo",
+    "jira",
+    "confluence",
+    "cloudflare-workers",
+    "pii-redaction",
+    "seosiri"
+  ],
+  "author": "Momenul Ahmad <info@seosiri.com> (https://seosiri.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@forge/bridge": "^4.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240821.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.3.3",
+    "wrangler": "^3.72.0"
+  }
+}
