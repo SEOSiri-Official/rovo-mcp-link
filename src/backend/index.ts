@@ -19,6 +19,34 @@ export default {
       return new Response(null, { status: 204, headers: corsHeaders });
     }
 
+        // RPC Endpoint Browser GET Info
+    if (url.pathname === "/rpc" && request.method === "GET") {
+      return new Response(JSON.stringify({
+        status: "OPERATIONAL",
+        service: "SEOSiri Rovo-MCP JSON-RPC 2.0 Gateway",
+        endpoint: "https://rovomcp.seosiri.com/rpc",
+        method: "POST",
+        description: "Send JSON-RPC 2.0 tool call requests via HTTP POST or connect via /sse."
+      }), {
+        status: 200,
+        headers: { "Content-Type": "application/json", ...corsHeaders }
+      });
+    }
+
+        // Browser GET Descriptor for /v1/mcp
+    if (url.pathname === "/v1/mcp" && request.method === "GET") {
+      return new Response(JSON.stringify({
+        status: "OPERATIONAL",
+        service: "SEOSiri Rovo-MCP Pipeline Endpoint",
+        endpoint: "https://rovomcp.seosiri.com/v1/mcp",
+        transport: "JSON-RPC 2.0 (HTTP POST) / SSE (GET /sse)",
+        specification: "Send JSON-RPC 2.0 payloads via POST with X-SEOSiri-Token header, or connect via /sse."
+      }), {
+        status: 200,
+        headers: { "Content-Type": "application/json", ...corsHeaders }
+      });
+    }
+
     // 1. Health Probe Endpoint
     if (url.pathname === '/health' && request.method === 'GET') {
       return new Response(JSON.stringify({
@@ -51,7 +79,7 @@ export default {
     }
 
     // 3. Bidirectional MCP Pipeline & Message Handler (/v1/mcp & /messages)
-    if ((url.pathname === '/v1/mcp' || url.pathname === '/messages') && request.method === 'POST') {
+    if ((url.pathname === '/v1/mcp' || url.pathname === '/messages' || url.pathname === '/rpc') && request.method === 'POST') {
       try {
         const authToken = request.headers.get('X-SEOSiri-Token');
         const configuredSecret = env.SEOSIRI_AUTH_SECRET || 'production_fallback_handshake_hash_token';
