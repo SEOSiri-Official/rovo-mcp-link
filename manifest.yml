@@ -13,6 +13,16 @@ modules:
 resources:
   - key: main-ui
     path: src/frontend/index.jsx
+  confluence:macro:
+    - key: seosiri-confluence-architecture-macro
+      title: SEOSiri MCP Architecture Embed
+      description: Embed live SEOSiri Model Context Protocol tools and topology data inside Confluence.
+      resource: confluence-ui
+      render: native
+resources:
+  - key: confluence-ui
+    path: src/confluence/macro.jsx
+
 app:
   runtime:
     name: nodejs22.x
