@@ -23,9 +23,10 @@
   "author": "Momenul Ahmad <info@seosiri.com> (https://seosiri.com)",
   "license": "MIT",
   "dependencies": {
-    "@forge/bridge": "^4.3.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@forge/bridge": "^4.5.3",
+    "@forge/react": "^12.1.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240821.0",

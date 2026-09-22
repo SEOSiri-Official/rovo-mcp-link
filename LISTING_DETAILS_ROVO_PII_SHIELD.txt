@@ -1,0 +1,93 @@
+================================================================================
+  ATLASSIAN MARKETPLACE SPEC: SEOSiri Rovo MCP & PII Shield for Jira
+  [PRODUCT 2: PAID ENTERPRISE SECURITY GATEWAY & PII AIR-GAP]
+================================================================================
+
+1. BASIC METADATA
+--------------------------------------------------------------------------------
+App Name (Max 60 chars) : SEOSiri MCP & PII Shield for Rovo
+App Key                 : com.seosiri.rovo.mcp.shield
+Vendor                  : SEOSiri Enterprise MCP Hub (or SEOSiri Enterprise Labs)
+Pricing Model           : Paid via Atlassian ($5 - $15 / user / month)
+
+2. STOREFRONT HOOKS (NO ENDING PERIOD)
+--------------------------------------------------------------------------------
+App Tagline (Max 130 chars):
+Zero-Trust AI Security Gateway and Real-Time PII Masker for Atlassian Rovo Agents and Jira
+
+App Summary (Max 250 chars):
+Enterprise security gateway connecting Jira & Atlassian Rovo agents to external LLMs and IDEs (Cursor, Claude) with real-time PII/PHI redaction and AI firewalls.
+
+Categories:
+- Primary   : Security
+- Secondary : AI & Machine Learning (or Integrations)
+
+Keywords:
+Atlassian Rovo, Model Context Protocol, MCP, PII Masking, Data Redaction, HIPAA, PCI-DSS, AI Firewall, Zero-Trust, Claude Desktop, Cursor AI, GDPR
+
+3. FULL STOREFRONT LONG DESCRIPTION (MARKDOWN)
+--------------------------------------------------------------------------------
+### Stop Enterprise AI Data Leaks at the Network Edge
+
+Deploying autonomous AI agents (like Atlassian Rovo, Cursor AI, or Claude Desktop) across corporate Jira workspaces introduces severe compliance and security risks. Raw prompts can inadvertently leak customer credit cards, employee Social Security Numbers, internal IP addresses, and private API keys.
+
+**SEOSiri Rovo MCP & PII Shield** acts as a Zero-Trust edge proxy and protocol-level AI Firewall deployed across Cloudflare global edge nodes (`rovomcp.seosiri.com`), sanitizing all data streams in real time before external model processing.
+
+---
+
+### 🛡️ Enterprise Security & Data Governance Engines
+
+1. **Real-Time Data Masking:**
+   - Edge-level regex scrubbing for Social Security Numbers (SSN), credit cards (PCI-DSS Luhn token masking), emails, and phone numbers.
+   - Zero-latency execution on Cloudflare V8 isolates without database read/write bottlenecks.
+
+2. **Healthcare & Financial Compliance Verticals:**
+   - **Healthcare (HIPAA PHI):** Automatically detects and redacts Medical Record Numbers (MRN), DEA registrations, and patient identifiers.
+   - **Finance (PCI-DSS / Banking):** Masks account numbers and credit card sequences.
+   - **Software & Cloud:** Redacts internal corporate VLANs, RFC 1918 private IPs, and RSA private keys.
+
+3. **AI Prompt Firewall:**
+   - Intercepts prompt injection exploits, system prompt override attempts, and malicious tool-call parameter tampering.
+
+4. **Multi-Client & Rovo Bridge:**
+   - Exposes a unified, authenticated JSON-RPC 2.0 interface serving Cursor, VS Code, Claude Desktop, and Atlassian Rovo Agents.
+
+5. **Zero-Cost Storage Economics:**
+   - Persists tenant policy settings inside Atlassian's native `@forge/bridge` storage vault, ensuring customer data never sits on third-party tracking databases.
+
+---
+
+### 🔗 Verification & Support Links
+- **Interactive Developer Portal:** https://developers.seosiri.com/
+- **Live Edge Gateway Status:** https://rovomcp.seosiri.com/health
+- **Corporate Support Desk:** info@seosiri.com
+
+4. HIGHLIGHTS / FEATURE CARDS
+--------------------------------------------------------------------------------
+Highlight 1:
+- Title : Real-Time PII/PHI Redaction
+- Body  : Automatically sanitizes emails, SSNs, credit cards, and HIPAA identifiers before model context ingestion.
+
+Highlight 2:
+- Title : AI Prompt Firewall
+- Body  : Intercepts prompt injection exploits, unauthorized system overrides, and credential-harvesting commands.
+
+Highlight 3:
+- Title : Zero-Trust Edge Performance
+- Body  : Sub-10ms latency routing across Cloudflare Workers edge nodes (rovomcp.seosiri.com) with zero server-side storage.
+
+5. PRICING TIERS (PAID VIA ATLASSIAN)
+--------------------------------------------------------------------------------
+- Tier 1 (1–10 Users)   : $5.00 / user / month
+- Tier 2 (11–100 Users) : $10.00 / user / month
+- Tier 3 (101+ Users)   : $15.00 / user / month
+
+6. LEGAL & SUPPORT URLS
+--------------------------------------------------------------------------------
+- Documentation URL     : https://www.seosiri.com/2026/07/seosiri-mcp-servers.html
+- Privacy Policy URL    : https://www.seosiri.com/p/privacy-policy.html
+- Support URL / Portal  : https://developers.seosiri.com/
+- Support Email Desk    : info@seosiri.com
+- End User License (EULA): Bonterms Standard End User Agreement (Select "Yes")
+- App Stores Personal Data: Select "No"
+================================================================================
